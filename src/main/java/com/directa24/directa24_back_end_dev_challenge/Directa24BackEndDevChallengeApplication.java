@@ -5,9 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class Directa24BackEndDevChallengeApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(Directa24BackEndDevChallengeApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(Directa24BackEndDevChallengeApplication.class, args);
+    }
 }
