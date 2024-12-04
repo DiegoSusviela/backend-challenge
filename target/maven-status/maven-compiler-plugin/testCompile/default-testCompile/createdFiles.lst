@@ -1,1 +1,4 @@
+controller\MovieControllerTest.class
+exception\ExceptionHandlerTest.class
 com\directa24\directa24_back_end_dev_challenge\Directa24BackEndDevChallengeApplicationTests.class
+service\MovieServiceImplTest.class

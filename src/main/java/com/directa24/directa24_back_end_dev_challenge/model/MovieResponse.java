@@ -23,5 +23,4 @@ public class MovieResponse {
 
     @JsonProperty("data")
     private List<Movie> data;
-
 }

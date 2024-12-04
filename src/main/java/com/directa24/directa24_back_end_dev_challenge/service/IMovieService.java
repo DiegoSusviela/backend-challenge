@@ -4,7 +4,6 @@ import com.directa24.directa24_back_end_dev_challenge.model.MovieResponse;
 
 import java.util.List;
 
-
 public interface IMovieService {
     /**
      * Retrieves a list of directors with movie counts greater than the specified threshold.
@@ -15,9 +14,9 @@ public interface IMovieService {
     List<String> getDirectors(int threshold);
 
     /**
-     * Endpoint to get a list of movies based on a given threshold.
+     * Endpoint to get a list of movies based on a given page.
      *
-     * @param page the threshold value used for filtering movies.
+     * @param page the page value used for the external movies service.
      * @return a MovieResponse object containing the list of movies.
      */
     MovieResponse getMovies(int page);

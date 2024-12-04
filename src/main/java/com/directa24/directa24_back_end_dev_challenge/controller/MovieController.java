@@ -5,6 +5,7 @@ import com.directa24.directa24_back_end_dev_challenge.model.MovieResponse;
 import com.directa24.directa24_back_end_dev_challenge.service.IMovieService;
 import com.directa24.directa24_back_end_dev_challenge.service.impl.MovieServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,6 +33,10 @@ public class MovieController {
     @GetMapping("/directors")
     public ResponseEntity<?> getDirectors(@RequestParam("threshold") int threshold) {
         List<String> directors = movieService.getDirectors(threshold);
+        if (directors.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body("No directors found with more than " + threshold + " movies.");
+        }
         return ResponseEntity.ok(new DirectorResponse(directors));
     }
 
